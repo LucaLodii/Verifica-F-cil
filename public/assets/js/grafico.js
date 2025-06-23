@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Busca dados de assuntos de fake news da API local.
-  fetch('http://localhost:3000/fakeNewsAssuntos') 
+  fetch('https://verifica-f-cil.onrender.com/fakeNewsAssuntos') 
     .then(response => response.json()) // Converte a resposta para JSON.
     .then(data => {
       // Extrai categorias e quantidades dos dados recebidos.

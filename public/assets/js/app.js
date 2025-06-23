@@ -1,6 +1,6 @@
 // Função para carregar os dados do carrossel, priorizando a API e usando fallback.
 function loadCarousel() {
-  fetch('http://localhost:3000/index.html') // URL da API para dados do carrossel.
+  fetch('https://verifica-f-cil.onrender.com/index.html') // URL da API para dados do carrossel.
     .then(function (response) {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -139,7 +139,7 @@ function displayResult(message, isSafe) {
 }
 
 // Carrega os dados de domínios.
-fetch('http://localhost:3000/urlChecker')
+fetch('https://verifica-f-cil.onrender.com/urlChecker')
   .then(response => {
     if (!response.ok) {
       console.error(`Erro de rede: ${response.status} ${response.statusText}`);
