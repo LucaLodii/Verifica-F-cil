@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Metatags Essenciais -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Identificar Fake News</title>
+
+  <!-- Favicon (adicione se tiver) -->
+  <link rel="icon" href="../../assets/images/favicon.ico">
+
+  <!-- CSS Global (única referência) -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <!-- CDNs - Agrupadas por tipo -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+  <!--Teste do css para ficar igual ao da página inicial-->
+<style>
+  body {
+    background-color: #d4f4dd; /* verde pastel */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .custom-section {
+    background-color: rgba(255, 255, 255, 0.7); /* branco com transparência */
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 5vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .custom-section h2 {
+    color: #00165f; /* azul escuro */
+    font-size: 1.5rem;
+  }
+
+  .custom-section p {
+    color: #00165f;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #00165f;
+  }
+
+  .card + .card {
+    margin-top: 20px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #DFF0D8;
+    color: black;
+    border-top: 1px solid #ccc;
+  }
+
+  .footer-logos i {
+    margin: 0 10px;
+    font-size: 1.5rem;
+  }
+
+  .custom-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Scripts (recomendado mover para antes do </body>) -->
+</head>
+<header class="navbar">
+  <div class="navbar-container">
+    <!-- Menu para dispositivos móveis -->
+    <input type="checkbox" id="menuToggle">
+    <label for="menuToggle" class="menu-icon2">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-xmark"></i>
+    </label>
+    <div class="logo-container">
+      <img class="logo-picture" src="../../assets/images/logoLupa.png" alt="">
+      <img class="logo-img" src="../../assets/images/logoEscrita.png" alt="logo">
+    </div>
+
+    <div class="menu-container">
+      <ul class="menu-list">
+        <li class="menu-list-item"><a class="nav-link" href="../../index.html">Início</a>
+        <li class="menu-list-item"><a class="nav-link" href="identificar.html">Como Identificar</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-container">
+      <div class="custom-dropdown">
+        <button class="dropdown-btn" aria-expanded="false" aria-controls="profile-dropdown" aria-label="Menu do perfil">
+          <img class="profile-picture" src="../../assets/images/ProfilePicture.jpg" alt="Foto do perfil" width="32"
+            height="32">
+          <span class="profile-text">Perfil</span>
+          <i class="fas fa-caret-down dropdown-icon" aria-hidden="true"></i>
+        </button>
+        <ul id="profile-dropdown" class="dropdown-content" role="menu">
+          <li role="none">
+            <button onclick="window.location.href='login.html';" class="dropdown-item" role="menuitem">
+              <i class="fas fa-user me-2" aria-hidden="true"></i>
+              Minha conta
+            </button>
+          </li>
+          <li role="none">
+            <button class="dropdown-item" role="menuitem">
+              <i class="fas fa-cog me-2" aria-hidden="true"></i>
+              Configurações
+            </button>
+          </li>
+          <li class="divider" role="separator"></li>
+          <li role="none">
+            <button class="dropdown-item active" id="btn-sair" role="menuitem" onclick="sair()">
+              <i class="fas fa-sign-out-alt me-2" aria-hidden="true"></i>
+              Sair
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<div>
+  <h1 class="main-title">Como Identificar uma Fake News</h1>
+</div>
+<div class="custom-section">
+  <div class="card-body border border-light text-dark">
+    <h2>Alguma notícia duvidosa?</h2>
+    <p>Cole seu link no verificador abaixo: </p>
+    <div class="url-checker-section">
+      <h2>Verificador de URLs</h2>
+      <div class="url-checker">
+        <input type="text" id="urlInput" placeholder="Cole URL suspeita...">
+        <button id="checkBtn">Verificar</button>
+      </div>
+      <div id="result" class="result-hidden">
+        <p id="resultText"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Leia com atenção o título da notícia</h2>
+    <p>Títulos sensacionalistas ou com letras maiúsculas exageradas como: "Chá milagroso cura todas as doenças", podem
+      indicar notícias falsas.</p>
+  </div>
+        <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Verifique a fonte da notícia</h2>
+    <p>Confie apenas em sites conhecidos ou oficiais. Desconfie de endereços estranhos ou cheios de números.<br>
+      Confira aqui embaixo a lista dos sites atuais mais confiáveis.
+    </p>
+  </div>
+      <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Veja a data da publicação da notícia</h2>
+    <p>Fique sempre de olho na data, pode acontecer de notícias antigas voltarem a circular como se fossem novas.
+    </p>
+  </div>
+      <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Pesquise em outros sites</h2>
+    <p>Veja se a notícia aparece em mais de um lugar confiável. Se está apenas em um site, CUIDADO!</p>
+  </div>
+      <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Desconfie de mensagens urgentes e exageradas</h2>
+    <p>Mensagens que dizem “Compartilhe rápido!” ou “Não conte a ninguém!” geralmente são enganosas.</p>
+  </div>
+      <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Verifique se a imagem ou o vídeo é verdadeiro</h2>
+    <p>Algumas fake news usam fotos e vídeos fora de contexto. Atualmente, o avanço da Inteligência Artificial
+      possibilitou a
+      criação desses conteúdos falsos.</p>
+  </div>
+      <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Consulte sites de verificação</h2>
+    <p>Use sites como: <a href="https://lupa.uol.com.br/" target="_blank">Agência Lupa,</a>
+      <a href="https://www.aosfatos.org/" target="_blank">Aos Fatos,</a>
+      <a href="https://www.boatos.org/" target="_blank">Boatos.org</a>
+    </p>
+  </div>
+      <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Não compartilhe sem ter certeza</h2>
+    <p>Se estiver em dúvida, NÃO COMPARTILHE. Pergunte para alguém próximo ou pesquise mais sobre a notícia.</p>
+  </div>
+      <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Saiba que errar é normal - o importante é aprender!</h2>
+    <p>Todos nós já fomos enganados por alguma fake news. O mais importante é aprender a identificar e evitar espalhar.
+    </p>
+  </div>
+      <div class="botoes-container">
+        <button class="leitura-btn btn-ler">Clique onde deseja ler</button>
+        <button class="leitura-btn btn-parar" disabled>Parar</button>
+      </div>
+</div>
+
+<div class="custom-section">
+  <div class="card-body border border-light">
+    <h2>Estatísticas sobre Fake News</h2>
+    <p>Saiba sobre os assuntos com mais ocorrências de fake news.</p>
+  </div>
+
+  <div class="chart-container">
+            <div class="chart-card">
+              <div class="card-header">
+                <h5><i class="fas fa-chart-pie"></i> Gráfico</h5>
+              </div>
+              <div class="card-body">
+                <canvas id="fakeNewsChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+
+</div>
+
+<footer>
+  <div class="footer-logos">
+    <i class="fa-brands fa-square-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-x-twitter"></i>
+    <i class="fa-brands fa-youtube"></i>
+    <div class="footer-copwright">
+      <i class="fa-regular fa-copyright"></i>
+      <p>2025-2999 Verifica-Fácil Ltda.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../../assets/js/app.js"></script>
+<script src="../../assets/js/grafico.js"></script>
+<script src="../../assets/js/botao.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1091 @@
+/* CSS UNIVERSAL INICIO */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #DFF0D8;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #DFF0D8;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: #141e3a;
+    position: fixed;
+    top: 0;
+    transition: background 0.4s ease;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    flex: 1;
+    padding-right: 11vh;
+}
+
+.logo-picture {
+    width: 25%;
+    height: 25%;
+    padding-top: 7.5vh;
+}
+
+.logo-img {
+    height: 125%;
+    width: 125%;
+}
+
+.menu-container {
+    padding: 20px;
+    flex: 4;
+    display: flex;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    padding-top: 3vh;
+}
+
+.menu-list-item {
+    margin-right: 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.menu-list-item .nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-list-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: brightness(0.9);
+}
+
+.menu-list-item button {
+    border: none;
+    background: none;
+    font-family: "Sen", sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 16px;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-container .fa-magnifying-glass {
+    padding: 0 10px;
+}
+
+/* Dropdown Customizado - Versão Estilizada */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.dropdown-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.profile-text {
+    font-family: "Sen", sans-serif;
+    font-size: 2.6vh;
+}
+
+.dropdown-icon {
+    transition: transform 0.3s ease;
+    font-size: 12px;
+}
+
+.custom-dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #111;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    border-radius: 4px;
+    list-style: none;
+    padding: 8px 0;
+    margin-top: 5px;
+    border: 1px solid #333;
+}
+
+.custom-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-item {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding: 10px 16px;
+    font-family: "Sen", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #182547;
+    color: white;
+}
+
+.dropdown-item.active:hover {
+    background-color: rgba(163, 0, 0, 0.5);
+    color: white;
+}
+
+.divider {
+    height: 1px;
+    background: #333;
+    margin: 8px 0;
+}
+
+
+.profile-text-container {
+    margin: 0 20px;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* CSS UNIVERSAL FIM */
+
+/* INDEX INICIO */
+.container-index {
+    background-color: #DFF0D8;
+    min-height: 93.2vh;
+    color: lightblue;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+}
+
+/* CARROSSEL LUCA */
+.carousel {
+    height: 101vh;
+    margin: 0vh 0;
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    text-shadow:
+        1px 1px 3px rgba(0, 0, 0, 0.8),
+        -1px -1px 3px rgba(0, 0, 0, 0.8),
+        0 0 8px rgba(0, 0, 0, 0.7);
+    color: white !important;
+}
+
+.carousel-caption .badge {
+    font-size: 0.9rem;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 60px;
+    width: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+
+    background-size: 80% 80%;
+}
+
+.custom-carousel-arrow {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+/* CARROSSEL LUCA */
+
+/*TREM DA GABI*/
+.container-noticias2 {
+    display: flex;
+    flex-direction: column;
+    /* organiza os filhos verticalmente */
+    flex-wrap: nowrap;
+    /* impede quebra de linha */
+    gap: 20px;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    height: 100vh;
+    width: calc(100% - 10vh);
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 70% de opacidade */
+    margin: 0 5vh;
+    border-radius: 20px;
+    /* bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+.container-noticias2 h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container-noticias2 .conteudo p {
+    color: #00165f;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.container-noticias2 .area-slides {
+    flex: 1;
+    position: relative;
+}
+
+.container-noticias2 .slide {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-noticias2 .noticia {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.container-noticias2 .imagem {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.container-noticias2 .imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-noticias2 .conteudo {
+    padding: 15px;
+}
+
+.container-noticias2 .conteudo h5:first-child {
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.container-noticias2 .conteudo h5:last-of-type {
+    font-weight: bold;
+}
+
+.container-noticias2 .conteudo p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.container-noticias2 .conteudo a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #3366ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.buttom_E {
+    color: #000000;
+}
+
+.container-noticias2 .setas {
+    position: absolute;
+    top: 50%;
+    right: -45px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.container-noticias2 .setas button {
+    background: #022355;
+    border: #022355;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.container-noticias2 h1 {
+    text-align: left;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* .caixinhasGabi {
+    margin-top: 50vh;
+    border: 1px solid red;
+    height: 65%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    gap: 5vh;
+} */
+
+/*TREM DA GABI*/
+
+/*TREM DA MANU*/
+.container-sites2 {
+    margin: 5vh 5vh 5vh 5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    height: 70vh;
+    width: calc(100% - 10vh);
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 70% de opacidade */
+    border-radius: 20px;
+    /* bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.titulo-manu {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.caixa-manu {
+    margin-top: 50vh;
+    height: 75%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    gap: 5vh;
+}
+
+/*TREM DA MANU*/
+
+/* VERIFICADOR DE URL - Começo */
+.url-checker-section {
+    max-width: 800px;
+    margin: 5vh auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.url-checker-section h2 {
+    font-size: 2.5em;
+    color: #1C2A51;
+    margin-bottom: 25px;
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+}
+
+.url-checker {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.url-checker input,
+.url-checker button {
+    border: 2px solid #DFF0D8;
+    border-radius: 25px;
+    font-size: 1.1em;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.url-checker input {
+    flex-grow: 1;
+    padding: 0 20px;
+    color: #333;
+    background-color: #fff;
+    max-width: 60%;
+}
+
+.url-checker input::placeholder {
+    color: #888;
+}
+
+.url-checker input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+.url-checker button {
+    flex-shrink: 0;
+    padding: 0 25px;
+    background-color: #1C2A51;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.url-checker button:hover {
+    background-color: #2c3e6c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.url-checker button:active {
+    background-color: #1a2340;
+    transform: translateY(0);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#result {
+    padding: 15px 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+    display: none;
+    width: 100%;
+    min-height: 70px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#result p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.safe {
+    background-color: #DFF0D8;
+    border-left: 6px solid #4CAF50;
+    color: #2a6a2c;
+}
+
+.risky {
+    background-color: #FFEBEE;
+    border-left: 6px solid #f44336;
+    color: #b71c1c;
+}
+
+/* VERIFICADOR DE URL - Fim */
+
+/* GRÁFICO CENTRALIZADO */
+.grafico-central {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.grafico-card {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+
+/* CLASSES UTILITÁRIAS */
+.hidden {
+    display: none;
+}
+
+/* INDEX FIM */
+
+
+/* DICAS INÍCIO */
+
+/* Container Principal */
+main.container {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+/* Header */
+header.bg-primary {
+    background-color: rgb(149, 208, 228) !important;
+    color: #000000;
+    padding: 1.5em 0;
+    margin-top: 50px;
+}
+
+.row.g-3.mb-4 {
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Nova regra adicionada */
+.row.g-0 .bg-light p.fs-6 {
+    color: #333333;
+}
+
+/* Cards de dicas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none !important;
+    border-radius: 8px !important;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card.border-danger {
+    border-left: 3px solid #dc3545 !important;
+}
+
+.card.border-success {
+    border-left: 3px solid #28a745 !important;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.75em;
+}
+
+/* Alerta de segurança */
+.alert-warning {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffc107 !important;
+    border-radius: 8px;
+}
+
+.alert-heading {
+    color: #222222;
+    font-weight: 600;
+}
+
+/* Footer */
+footer.bg-dark {
+    background-color: rgb(0, 0, 0) !important;
+    color: #000000;
+    padding: 1.5em 0;
+    margin-top: 3em;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+
+    .row.g-3 .col-lg-8,
+    .row.g-3 .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .ratio.ratio-1x1 {
+        margin-top: 1.5em;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Sen", sans-serif;
+    color: #000000;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Botões e elementos interativos */
+.btn,
+.nav-link,
+.dropdown-item {
+    transition: all 0.2s ease;
+}
+
+/* Efeito de hover nos cards de dica */
+.col-md-6:hover .card {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* DICAS FIM */
+
+/* IDENTIFICAR INICIO */
+.card {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.container {
+    background-color: white;
+    min-height: calc(100vh - 50px);
+    color: lightblue;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    padding: 20px;
+}
+
+.main-layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 9vh;
+    align-items: flex-start;
+    /* Alinhar pelo topo */
+}
+
+/* IDENTIFICAR FIM */
+
+/* BOTÃO */
+#lerBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#lerBtn:hover {
+    background-color: #45a049;
+}
+
+#lerBtn.parar {
+    background-color: #f44336;
+}
+
+#lerBtn.parar:hover {
+    background-color: #d32f2f;
+}
+
+/* FIM BOTÃO */
+
+/* FOOTER*/
+
+.footer {
+    font-size: 22px;
+    padding: 1.7vh 3vh;
+    color: white;
+    background-color: #1C2A51;
+    ;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    /* Alinha todos os itens verticalmente */
+    gap: 2vh;
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    /* Alinha ícone e texto verticalmente */
+    gap: 1vh;
+    font-size: 2vh;
+}
+
+.footer-copyright p {
+    margin: 0;
+    /* Remove margem padrão do parágrafo */
+    line-height: 1;
+    /* Controla a altura da linha */
+}
+
+.footer-container i,
+.footer-copyright i {
+    vertical-align: middle;
+    /* Alinha ícones verticalmente */
+}
+
+/* botao universal*/
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    gap: 10px;
+    /* Espaço entre os botões */
+    margin-top: 15px;
+    /* Espaço acima dos botões */
+    width: 100%;
+    /* Ocupa toda a largura */
+    padding: 6px 20px;
+    /* Aumente o padding horizontal se quiser botões mais largos */
+    min-width: 100px;
+    /* Largura mínima para consistência */
+    margin: 0;
+    /* Remova margens laterais */
+}
+
+/* Estilo base para os botões */
+.leitura-btn {
+    border: none;
+    padding: 6px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    min-width: 80px;
+}
+
+/* Botão Ler - Verde */
+.btn-ler {
+    background-color: #4CAF50;
+    /* Verde */
+    color: white;
+}
+
+.btn-ler:hover {
+    background-color: #3e8e41;
+    /* Verde mais escuro */
+}
+
+/* Botão Parar - Vermelho */
+.btn-parar {
+    background-color: #f44336;
+    /* Vermelho */
+    color: white;
+}
+
+.btn-parar:hover {
+    background-color: #d32f2f;
+    /* Vermelho mais escuro */
+}
+
+/* Estado desabilitado */
+.leitura-btn:disabled {
+    background-color: #e0e0e0 !important;
+    color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+/* Efeito de clique */
+.leitura-btn:active {
+    transform: scale(0.96);
+}
+
+/* --- ESTILOS INICIAIS PARA CONTROLAR O HAMBÚRGUER (FORA DE MEDIA QUERIES) --- */
+/* Estes estilos se aplicam por padrão e são sobrescritos em mobile. */
+
+/* Oculta o checkbox real que controla o menu */
+#menuToggle {
+    display: none;
+}
+
+/* Esconde o ícone de 'X' por padrão */
+.menu-icon2 .fa-xmark {
+    display: none;
+}
+
+/* Oculta o container do ícone do hambúrguer por padrão em desktop */
+.menu-icon2 {
+    display: none; /* Isso esconde o ícone em telas grandes */
+}
+
+/* --- MEDIA QUERY PARA DISPOSITIVOS MÓVEIS (MAX-WIDTH: 768PX) --- */
+@media (max-width: 768px) {
+
+    .navbar-container {
+        padding: 0 20px;
+        flex-wrap: wrap; /* Permite quebras de linha para o menu */
+        justify-content: space-between;
+        align-items: center; /* Alinha itens na linha principal (logo e hambúrguer) */
+    }
+
+    /* Mostra o ícone do menu hambúrguer */
+    .menu-icon2 {
+        display: block; /* Agora o ícone aparece em mobile */
+        font-size: 28px;
+        cursor: pointer;
+        order: 3; /* Posiciona à direita do logo */
+        color: white;
+    }
+
+    /* Ajustes do logo para mobile: flexibilidade e tamanho */
+    .logo-container {
+        flex: 1; /* Permite que o logo ocupe o espaço central */
+        padding-right: 0;
+        order: 2; /* Fica no centro */
+        justify-content: center; /* Centraliza as imagens do logo dentro do container */
+        gap: 5px;
+    }
+
+    .logo-picture {
+        width: 35px;
+        height: 35px;
+        padding-top: 0;
+    }
+
+    .logo-img {
+        width: 90px;
+        height: auto;
+    }
+
+    /* Oculta o menu de navegação principal e o perfil por padrão em mobile (antes de clicar) */
+    .menu-container,
+    .profile-container {
+        display: none;
+        flex-basis: 100%; /* Ocupa a largura total quando visível */
+        position: static; /* Remove posicionamento absoluto para fluir com o documento */
+        width: 100%;
+        background-color: #141e3a;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* Estiliza o menu e o perfil quando o checkbox do hambúrguer está marcado (menu aberto) */
+    #menuToggle:checked ~ .menu-container {
+        display: flex; /* Exibe o menu */
+    }
+
+    #menuToggle:checked ~ .profile-container {
+        display: flex; /* Exibe o perfil */
+        border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separador visual entre menu e perfil */
+        margin-top: 0; /* Garante que cole no menu */
+    }
+
+    /* Ajustes para a lista de itens do menu em mobile */
+    .menu-list {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .menu-list-item {
+        margin-right: 0;
+        margin-bottom: 15px; /* Espaçamento entre itens */
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-list-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu-list-item .nav-link {
+        padding: 10px 0;
+        display: block;
+    }
+
+    /* Troca os ícones de hambúrguer para 'X' e vice-versa quando o menu está aberto */
+    #menuToggle:checked + .menu-icon2 .fa-bars {
+        display: none;
+    }
+
+    #menuToggle:checked + .menu-icon2 .fa-xmark {
+        display: block;
+    }
+
+    /* Ajustes para o dropdown do perfil quando exibido em mobile */
+    .profile-container .custom-dropdown {
+        position: static;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .profile-container .dropdown-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-container .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        padding: 5px 0;
+        margin-top: 0;
+    }
+
+    .profile-container .dropdown-item {
+        text-align: center;
+        padding: 8px 16px;
+    }
+
+    .profile-text {
+        font-size: 18px;
+    }
+
+    /* --- RESPONSIVIDADE PARA URL CHECKER --- */
+    .url-checker-section {
+        padding: 15px;
+        margin: 3vh auto;
+    }
+    .url-checker-section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .url-checker {
+        flex-direction: column; /* Empilha input e botão */
+        height: auto;
+        gap: 10px;
+    }
+    .url-checker input {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+    }
+    .url-checker button {
+        width: 100%;
+        min-width: unset;
+        padding: 12px 20px;
+    }
+    #result {
+        margin-top: 15px;
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+}
+
+/* --- REGRAS PARA DESKTOP (MIN-WIDTH: 769PX) --- */
+@media (min-width: 769px) {
+    /* Oculta o ícone do hambúrguer em telas maiores */
+    .menu-icon2 {
+        display: none;
+    }
+    /* O restante do layout de desktop é controlado pelo seu CSS padrão */
+}

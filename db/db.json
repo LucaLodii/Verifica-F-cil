@@ -1,0 +1,176 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": 2,
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "id": 3,
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com"
+    }
+  ],
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Nova vacina é lançada contra vírus desconhecido",
+      "resumo": "Especialistas anunciam vacina experimental.",
+      "link": "https://noticias.confiavel.com/vacina-virus",
+      "sites": [
+        {
+          "nome": "Agência Lupa",
+          "url": "https://lupa.uol.com.br/",
+          "confiaveis": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Político famoso apoia plano secreto de dominação mundial",
+      "resumo": "Fake news detectada sobre política internacional.",
+      "link": "https://checagem.com/politica-fake",
+      "sites": [
+        {
+          "nome": "Aos Fatos",
+          "url": "https://www.aosfatos.org/",
+          "confiaveis": true
+        }
+      ]
+    }
+  ],
+  "sites": [
+    {
+      "id": 1,
+      "nome": "Agência Lupa",
+      "url": "https://lupa.uol.com.br/",
+      "confiaveis": true
+    },
+    {
+      "id": 2,
+      "nome": "Aos Fatos",
+      "url": "https://www.aosfatos.org/",
+      "confiaveis": true
+    }
+  ],
+  "quiz": [
+    {
+      "id": 1,
+      "pergunta": "Qual é uma prática recomendada ao verificar uma notícia?",
+      "opcoes": [
+        { "id": 1, "descricao": "Compartilhar imediatamente" },
+        { "id": 2, "descricao": "Conferir a fonte" },
+        { "id": 3, "descricao": "Ignorar o conteúdo" }
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "id": 2,
+      "pergunta": "O que pode indicar que uma notícia é falsa?",
+      "opcoes": [
+        { "id": 1, "descricao": "Título sensacionalista" },
+        { "id": 2, "descricao": "Fonte oficial confiável" },
+        { "id": 3, "descricao": "Citações de especialistas" }
+      ],
+      "respostaCorreta": 1
+    }
+  ],
+  "carrossel": [
+    {
+      "id": 1,
+      "titulo": "Lula vai confiscar poupança",
+      "imagem": "assets/images/imgCarrossel1.jpg",
+      "verdadeiro": false,
+      "fonte": "Banco Central",
+      "descricao": "Não há qualquer proposta para confiscar poupanças superiores a R$ 5 mil"
+    },
+    {
+      "id": 2,
+      "titulo": "Laudo médico de Boulos",
+      "imagem": "assets/images/imgCarrossel2.jpg",
+      "verdadeiro": false,
+      "fonte": "Aos Fatos",
+      "descricao": "Documento atribuído ao político é inválido"
+    },
+    {
+      "id": 3,
+      "titulo": "Ancelotti na seleção",
+      "imagem": "assets/images/imgCarrossel3.jpg",
+      "verdadeiro": true,
+      "fonte": "CBF",
+      "descricao": "Técnico italiano confirmado para 2024"
+    }
+  ],
+  
+  "urlChecker": {
+    "riskyDomains": [
+      "bit.ly",
+      "encurtador.com",
+      "fakenews.com.br",
+      "whatsapp-status.com",
+      "noticiasja.xyz",
+      "saudefacil.net",
+      "beneficiodigital.online",
+      "curasmilagrosas.info",
+      "sorteiosreais.com",
+      "urgenteagora.top",
+      "phishingbank.com",
+      "receitafederal-consulta.com"
+    ],
+    "safeDomains": [
+      "gov.br",
+      "uol.com.br",
+      "g1.globo.com",
+      "estadao.com.br",
+      "folha.uol.com.br",
+      "r7.com",
+      "cnnbrasil.com.br",
+      "agenciabrasil.ebc.com.br",
+      "inss.gov.br",
+      "caixa.gov.br"
+    ]
+  },
+
+  "componenteExtra": {
+    "componente": "botaoMostrarConteudo",
+    "estado": {
+      "botaoVisivel": true,
+      "conteudoVisivel": false
+    },
+    "acao": "aoClicar -> conteudoVisivel = true"
+  },
+  
+  "fakeNewsAssuntos": [
+    {
+      "categoria": "Política",
+      "quantidade": 320
+    },
+    {
+      "categoria": "Saúde",
+      "quantidade": 210
+    },
+    {
+      "categoria": "Segurança Pública",
+      "quantidade": 150
+    },
+    {
+      "categoria": "Educação",
+      "quantidade": 90
+    },
+    {
+      "categoria": "Ciência e Tecnologia",
+      "quantidade": 50
+    }
+  ]
+}
